@@ -42,7 +42,7 @@
                 <form class="searchbar">
                     <div class="searchbar-inner">
                         <div class="searchbar-input-wrap">
-                            <input class="input-search" type="search" placeholder="Procurar" />
+                            <input class="input-custom" type="search" placeholder="Procurar" />
                             <i class="searchbar-icon"></i>
                             <span class="input-clear-button"></span>
                         </div>
@@ -64,7 +64,7 @@
                     <div class="view">
                         <div class="page">
                             <div class="navbar">
-                                <div class="navbar-bg bg-black"></div>
+                                <div class="navbar-bg bg-secondary-color"></div>
                                 <div class="navbar-inner">
                                     <div class="title txt-primary">Nova Pergunta</div>
                                     <div class="right">
@@ -75,7 +75,127 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="page-content bg-secondary-color">
+                            <div class="page-content bg-black">
+                                <div class="list bg-black">
+                                    <ul>
+                                        <li class="item-content item-input bg-black">
+                                            <div class="item-inner bg-black">
+                                                <div class="item-title item-label txt-primary fw-bold">Título da Pergunta</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom" type="text" placeholder="Digite o título" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input bg-black">
+                                            <div class="item-inner bg-black">
+                                                <div class="item-title item-label txt-primary fw-bold">Pergunta Capturada por Voz</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom" type="text" placeholder="Este campo será preenchido automaticamente" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Fab left button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-left-bottom">
+                                        <a href="#" class="popup-close">
+                                            <img src="img/cancel.png">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Fab center button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-center-bottom">
+                                        <a href="#">
+                                            <img src="img/record.png">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Fab right button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-right-bottom">
+                                        <a href="#">
+                                            <img src="img/confirm.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listen question popup -->
+                <div class="popup listen-question-popup" id="listen-question-center-popup">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar">
+                                <div class="navbar-bg bg-secondary-color"></div>
+                                <div class="navbar-inner">
+                                    <div class="title txt-primary">Resposta do Tupan</div>
+                                    <div class="right">
+                                        <!-- Link to close popup -->
+                                        <a class="link popup-close">
+                                            <img src="img/arrow-close-down.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content bg-black">
+                                <div class="list bg-black">
+                                    <ul>
+                                        <li class="item-content item-input bg-black">
+                                            <div class="item-inner bg-black">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta Escrita</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom" type="text"/>
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input bg-black">
+                                            <div class="item-inner bg-black">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta por Voz</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom" type="text"/>
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Fab left button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-left-bottom">
+                                        <a href="#" class="popup-close">
+                                            <img src="img/cancel.png">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Fab center button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-center-bottom">
+                                        <a href="#">
+                                            <img src="img/talk.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Fab right button-->
+                                <div id="question-center-fab">
+                                    <div class="fab fab-extended fab-right-bottom">
+                                        <a href="#">
+                                            <img src="img/confirm.png">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,11 +207,11 @@
                     <div class="list media-list" id="question-center-list">
                         <ul>
                             <li>
-                                <a href="#" class="item-link item-content">
+                                <a href="#" data-popup=".listen-question-popup" class="item-link item-content pop-open">
                                     <div class="item-inner">
                                         <div class="item-title fw-bold"><i class="mdi mdi-text"></i>Pergunta Formatada
                                         </div>
-                                        <div class="item-subtitle"><i class="mdi mdi-microphone  "></i>Pergunta Ouvida
+                                        <div class="item-subtitle"><i class="mdi mdi-microphone"></i>Pergunta Ouvida
                                         </div>
                                     </div>
                                 </a>
